@@ -1,0 +1,16 @@
+{
+    "DEFAULT_TIMEZONE":"Asia/kolkata",
+    "MAIL_FROM_ADDRESS":"sakthi@rgmobiles.com",
+    "SENDGRID_API_KEY_OLD":"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",
+    "SENDGRID_API_KEY":"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",
+    "AUTHORIZATION_KEY":"b2ROZXRId1RISWFQOlBhSUhUd0h0ZU5kbw==",
+    "AWS_ACCESS_KEY": "AKIAIPX5ODGNRSBWLE6Q",
+    "AWS_SECRET_ACCESS_KEY": "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",
+    "REGION": "ap-southeast-1",
+    "BUCKET": "hrmfilesupload",
+    "SERVER_PORT":9001,
+    "SERVER_URL_STATIC":"http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com",
+    "CLIENT_PORT":3000,
+    "CLIENT_URL_STATIC":"http://ec2-54-251-142-179.ap-southeast-1.compute.amazonaws.com"
+}
+

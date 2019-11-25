@@ -1,0 +1,35 @@
+{
+  "name": "auth_app",
+  "version": "1.0.0",
+  "description": "LDR Auth Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "LDR Tech",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
+    "asyncforeach-promise": "^0.2.1",
+    "aws-sdk": "^2.511.0",
+    "exceljs": "^1.14.0",
+    "express": "^4.17.1",
+    "express-validator": "^4.3.0",
+    "html-pdf": "^2.2.0",
+    "ip": "^1.1.5",
+    "jsonschema": "^1.2.4",
+    "jsonwebtoken": "^8.5.1",
+    "locutus": "^2.0.11",
+    "md5": "^2.2.1",
+    "moment": "^2.24.0",
+    "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
+    "mysql": "^2.17.1",
+    "php-unserialize": "0.0.1",
+    "phpunserialize": "^1.0.1",
+    "q": "^1.5.1",
+    "randomstring": "^1.1.5",
+    "to-words": "^1.0.3",
+    "xlsx": "^0.15.1"
+  }
+}

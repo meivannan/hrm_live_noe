@@ -1,0 +1,32 @@
+
+ levystatement.forEach((data, index) => {
+                        var tier2_val=data.tier2;
+                    //Tier2 Allocation
+                    var tier2cal;
+                    for(tier2cal=1;tier2cal<=tier2_val;tier2cal++)
+                    {
+                        console.log('tier2loop',tier2cal)
+                        var tiertwoquery = "SELECT * from  " + tableConfig.HRM_EMPLOYEE_DETAILS + " as emp  where (emp.visa_status=3 || emp.visa_status=4) and (tier1!=1 && (tier2!=1 || tier2 is NULL)) GROUP BY emp.emp_id order by emp.visa_status asc, emp.id asc limit 1";
+                        console.log('tiertwoquery',tiertwoquery)
+                        sql.query(tiertwoquery, function (err, tiertwores) {
+                            if (err) {
+                                console.log(err)
+                                deferred.resolve({ status: 0, message: 'Something  Went Wrong' });
+                            } else {
+                        tiertwores.forEach((data, index) => {
+                        var tiertwoupdate = "Update hrm_employee_details set tier2=1 where id="+ data.id +"";
+                        console.log('up_que2',tiertwoupdate)
+                        sql.query(tiertwoupdate, function (err, tiertwoupres) {
+                            if (err) {
+                                console.log(err)
+                                deferred.resolve({ status: 0, message: 'Something  Went Wrong' });
+                            } else {
+                                deferred.resolve({ status: 0, message: 'Updated Successfully' });
+                            }
+                        });
+                        
+                             }); 
+                            }
+                        });
+                    }
+                });

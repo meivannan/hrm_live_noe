@@ -1,0 +1,8 @@
+
+Release Code
+============
+docker run -p 4200:8092 -d auth-app:latest
+
+developer updates to application
+================================
+20190225: Firt release deployed to staging server on port 4200

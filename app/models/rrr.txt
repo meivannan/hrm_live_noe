@@ -1,0 +1,46 @@
+//Total workforce
+            //Local Employees Count(LQS Count)
+            var query = "SELECT * from hrm_employee_details as em inner join hrm_user_master as um  on um.id=em.emp_id WHERE  um.company_id='"+company_id+"' and (em.visa_status=1 || em.visa_status=2)";
+            console.log('testquery',query)
+            var totalemployeecount=0;
+            sql.query(query, function (err, employeecount) {
+                if (err) {
+                    console.log(err);
+                    deferred.resolve({ status: 0, message: 'Something  Went Wrong' });
+                } else {
+                    var total_emp_count=0
+                    employeecount.forEach((data, index) => {
+                        if(data.basic_salary>1300)
+                        {
+                            var empcount=1;
+                        }
+                        if(data.basic_salary>650 && data.basic_salary<1300)
+                        {
+                            var empcount=0.5; 
+                        }
+                        if(data.basic_salary<400)
+                        {
+                            var empcount=0;
+                        }
+                        console.log('idandsal',data.basic_salary+'-'+data.id)
+                        console.log('ecount',empcount)
+                        if(empcount!=undefined){
+                            totalemployeecount+=parseFloat(empcount);
+                        }
+                    });
+            var wp_spassquery = "SELECT count(*) as foriegn_count  from hrm_employee_details as em inner join hrm_user_master as um  on um.id=em.emp_id WHERE  um.company_id='"+company_id+"' and (em.visa_status=3 || em.visa_status=4)";
+            console.log('testquery2',wp_spassquery)
+            sql.query(wp_spassquery, function (err, wp_spassqueryresult) {
+                if (err) {
+                    console.log(err);
+                    deferred.resolve({ status: 0, message: 'Something  Went Wrong' });
+                } else {
+                    total_emp_count=wp_spassqueryresult[0].foriegn_count+totalemployeecount
+                    console.log('lqs',totalemployeecount)
+                    console.log('foriegn',wp_spassqueryresult[0].foriegn_count)
+                        console.log('total_workforce',wp_spassqueryresult[0].foriegn_count+totalemployeecount)
+                }
+            });
+                    }
+                
+            });
