@@ -25,10 +25,7 @@ module.exports = {
                 deferred.resolve({status:0,message:"Updated failed "})
                 
                 
-                // if(savedata.affectedRows > 0)
-                // {
-                //     deferred.resolve({status:1,message:"Inserted Successfully"})
-                // }
+               
             }
            
 
