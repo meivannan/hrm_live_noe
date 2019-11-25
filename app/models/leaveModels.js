@@ -23,7 +23,7 @@ module.exports = {
             else
             {
                 deferred.resolve({status:0,message:"Updated failed "})
-                // var saveQuery="INSERT INTO `hrm_leave_type`( `leave_type`, `duration`, `month_day`) VALUES ('"+leave_type+"','"+duration+"','"+days+"') "
+                
                 // var savedata=await commonFunction.getQueryResults(saveQuery);
                 // if(savedata.affectedRows > 0)
                 // {
