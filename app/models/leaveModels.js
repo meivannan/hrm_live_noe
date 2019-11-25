@@ -24,7 +24,7 @@ module.exports = {
             {
                 deferred.resolve({status:0,message:"Updated failed "})
                 
-                // var savedata=await commonFunction.getQueryResults(saveQuery);
+                
                 // if(savedata.affectedRows > 0)
                 // {
                 //     deferred.resolve({status:1,message:"Inserted Successfully"})
