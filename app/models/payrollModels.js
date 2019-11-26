@@ -451,7 +451,7 @@ console.log("pr_datew",moment().format("YYYY"))
                   
                                         
                   
-                        result[index].sdlpayableamount=sdlpayable;
+                        result[index].sdlpayableamount=sdlpayable.toFixed(2);
                         result[index].employee_contribution_amount =   Math.round(employee_contribution_amount);
                         result[index].employer_contribution_amount =  Math.round(employer_contribution_amount) ;
                         result[index].gross_salary = result[index].basic_salary + totalAllowanceAmount + result[index].bonus;
@@ -539,7 +539,7 @@ console.log("pr_datew",moment().format("YYYY"))
                         
                        var sgh_final=(result[index].shg_deucation)==undefined?0:result[index].shg_deucation;
                        console.log("finalsalary",sgh_final)
-                       var finalnet=netSalaryFinal-sgh_final+result[index].sdlpayableamount;  
+                       var finalnet=netSalaryFinal-sgh_final+ parseInt(result[index].sdlpayableamount);  
                        console.log("finalnet",finalnet)
                          
                        result[index].self_group_amount =sgh_final // sgh_amountdeducation==undefined?0:sgh_amountdeducation; 
