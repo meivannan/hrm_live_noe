@@ -535,8 +535,7 @@ console.log("pr_datew",moment().format("YYYY"))
                         {
                             result[index].shg_deucation=0;
                         }     
-                      
-                        
+                          
                        var sgh_final=(result[index].shg_deucation)==undefined?0:result[index].shg_deucation;
                        console.log("finalsalary",sgh_final)
                        var finalnet=netSalaryFinal-sgh_final+ parseInt(result[index].sdlpayableamount);  
